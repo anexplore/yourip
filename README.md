@@ -1,17 +1,24 @@
 # yourip
-send back your ip address which you are using commuting with the server
+返回你与此服务通信的IP地址
 
 
-### start service
+### 启动
 java -jar yourip-1.0-jar-with-dependencies.jar
 
-this is will bind on 0.0.0.0:80 to service for returning your ip which you are using 
+将服务绑定在0.0.0.0:80 
 
-### usage
+### 请求
 curl -kv 'http://bindAddr:bindPort/'
 
-### change configs
+### 响应
+172.16.0.3
+
+### 更改配置
 use -D to set bindAddr\bindPort\https\workSize\coreSize\sslKeyPath\sslCrtPath
 
-### response
-172.16.0.3
+### 使用场景
+!!如果是获取外网IP可以使用已有成熟的服务比如proxyjudge.us等
+
+私有网络环境机器多网卡、多网段、ip映射/绑定等
+
+
