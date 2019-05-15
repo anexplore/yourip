@@ -31,7 +31,7 @@ public class IpAddressHandler extends SimpleChannelInboundHandler<HttpObject> {
     protected void channelRead0(ChannelHandlerContext ctx, HttpObject msg) throws Exception {
         SocketAddress address = ctx.channel().remoteAddress();
         if (msg instanceof HttpRequest) {
-            LOG.info("received {} request", address);
+            //LOG.info("received {} request", address);
             String ip = "";
             int port = 0;
             if (address instanceof InetSocketAddress) {
